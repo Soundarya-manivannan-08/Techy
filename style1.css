@@ -1,0 +1,217 @@
+/* --- GLOBAL STYLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* --- HEADER & NAVIGATION --- */
+header {
+    background-color: #0f172a; /* Dark Navy */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo img{
+    width:120px;
+    filter: brightness(0) saturate(100%) invert(38%) sepia(92%) saturate(1500%) hue-rotate(190deg);
+}
+#nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+#nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+#nav-list a:hover {
+    color: #38bdf8;
+}
+
+/* --- Hamburger Menu Icon --- */
+.menu-toggle {
+    display: none; /* Hidden on Desktop */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+/* --- HERO SECTION --- */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('./assets/img_1518770660439-4636190af475.webp');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* --- CONTAINERS & GRIDS --- */
+.container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    border-left: 5px solid #00d4ff;
+    padding-left: 15px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* --- CARDS --- */
+.card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 15px 15px 5px;
+}
+
+.card p {
+    padding: 0 15px 20px;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.center {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* --- NEWSLETTER / CTA --- */
+.cta {
+    background: #00d4ff;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.cta h2 { margin-bottom: 10px; }
+
+.cta input {
+    padding: 12px;
+    width: 300px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.cta button {
+    padding: 12px 25px;
+    background: #1a1a1a;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cta button:hover {
+    background: #333;
+}
+
+/* --- FOOTER --- */
+footer {
+    background: #1a1a1a;
+    color: #bbb;
+    padding: 50px 0 20px;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    padding: 0 20px 40px;
+}
+
+footer h3, footer h4 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+footer a {
+    color: #bbb;
+    font-size: 0.9rem;
+}
+
+footer a:hover {
+    color: #00d4ff;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    nav {
+        margin-top: 15px;
+    }
+    nav a {
+        margin: 0 10px;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}

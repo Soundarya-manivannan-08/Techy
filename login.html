@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Stackly News</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .login-hero {
+            min-height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(10, 11, 16, 1)), url('./assets/img_1557804506-669a67965ba0.webp') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .login-card {
+            background: rgba(20, 20, 30, 0.8);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .login-card h2 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .input-group i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #aaa;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 15px 15px 15px 50px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn-login:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px var(--primary);
+        }
+
+        .login-footer {
+            margin-top: 25px;
+            text-align: center;
+            color: #aaa;
+        }
+
+        .login-footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .login-footer a:hover {
+            color: white;
+        }
+
+        .back-home {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+            z-index: 10;
+        }
+
+        .back-home:hover {
+            color: var(--primary);
+        }
+    </style>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+    <!-- HEADER -->
+    <header>
+        <a href="index.html" class="logo" style="text-decoration: none;">
+            <img src="./assets/tmp_f83c2b80-b5e7-4372-945a-dd0c3b0d0067.webp" alt="Stackly Logo" width="120">
+        </a>
+        <nav id="nav-list">
+            <div class="dropdown">
+                <a href="javascript:void(0)">Home</a>
+                <div class="dropdown-content">
+                    <a href="index.html">Home 1</a>
+                    <a href="home2.html">Home 2</a>
+                </div>
+            </div>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+    </header>
+
+    <div class="login-hero">
+        <div class="login-card">
+            <h2>Welcome Back</h2>
+
+            <form action="dashboard.html" method="GET">
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" required>
+                </div>
+
+                <div style="display: flex; justify-content: space-between; margin-bottom: 20px; font-size: 0.9rem;">
+                    <label style="color: #aaa; cursor: pointer;">
+                        <input type="checkbox" style="margin-right: 5px;"> Remember me
+                    </label>
+                    <a href="404.html" style="color: var(--primary); text-decoration: none;">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="btn-login">Sign In</button>
+            </form>
+
+            <div class="login-footer">
+                Don't have an account? <a href="signup.html">Register Here</a>
+            </div>
+
+            <div style="margin-top: 30px; text-align: center; position: relative;">
+                <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.1);">
+                <span
+                    style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: rgba(20,20,30,1); padding: 0 10px; color: #555; font-size: 0.9rem;">OR
+                    SIGN IN WITH</span>
+            </div>
+
+            <div style="display: flex; gap: 15px; margin-top: 25px;">
+                <button onclick="window.location.href='404.html'"
+        style="flex: 1; padding: 12px; border-radius: 50px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; cursor: pointer; transition: 0.3s;">
+        <i class="fab fa-google" style="margin-right: 8px;"></i> Google
+    </button>
+
+    <button onclick="window.location.href='404.html'"
+        style="flex: 1; padding: 12px; border-radius: 50px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; cursor: pointer; transition: 0.3s;">
+        <i class="fab fa-apple" style="margin-right: 8px;"></i> Apple
+    </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const loginForm = document.querySelector('form');
+        const emailInput = document.querySelector('input[type="email"]');
+        const passwordInput = document.querySelector('input[type="password"]');
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const email = emailInput.value;
+            const password = passwordInput.value;
+            const specialChars = /[!@#$%^&*(),.?":{}|<>]/;
+
+            // Basic email validation (already handled by type="email", but let's be explicit as requested)
+            if (!email.includes('@')) {
+                alert('Please enter a valid email address with @');
+                return;
+            }
+
+            // Special characters validation for password
+            if (!specialChars.test(password)) {
+                alert('Password must contain at least one special character (!@#$%^&* etc.)');
+                return;
+            }
+
+            // Show loader from script.js and then redirect
+            const loader = document.getElementById('loader-wrapper');
+            if (loader) loader.classList.add('active');
+            
+            setTimeout(() => {
+                window.location.href = '404.html';
+            }, 800);
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

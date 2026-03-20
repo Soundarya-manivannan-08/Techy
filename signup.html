@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up | STACKLY</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --accent1: #00c6ff;
+    --accent2: #6f00ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #000;
+}
+
+/* BACKGROUND */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: url('./assets/signup_bg.webp') center/cover no-repeat;
+    position: relative;
+}
+
+/* DARK OVERLAY */
+.login-container::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+}
+
+/* CARD */
+.login-card {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px;
+
+    background: rgba(20, 20, 30, 0.6);
+    backdrop-filter: blur(25px);
+
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.08);
+
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
+}
+
+/* HEADER */
+.login-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.login-header h1 {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.login-header p {
+    color: rgba(255,255,255,0.6);
+    font-size: 16px;
+}
+
+/* INPUTS */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-wrapper input::placeholder {
+    color: rgba(255,255,255,0.5);
+    font-weight: 600;
+}
+
+.input-wrapper input:focus {
+    border-color: var(--accent1);
+    box-shadow: 0 0 12px rgba(0,198,255,0.4);
+}
+
+/* CHECKBOX */
+.checkbox-group {
+    display: flex;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.6);
+    margin: 15px 0;
+}
+
+.checkbox-group a {
+    color: var(--accent1);
+}
+
+/* BUTTON */
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 30px;
+
+    background: linear-gradient(90deg, var(--accent1), var(--accent2));
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(111,0,255,0.4);
+}
+
+/* FOOTER */
+.signup-link {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.6);
+}
+
+.signup-link a {
+    color: var(--accent1);
+    text-decoration: none;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.login-card {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.form-group {
+    animation: slideInLeft 0.6s ease-out;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+}
+
+.form-group:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.form-group:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.checkbox-group {
+    animation: slideInLeft 0.6s ease-out;
+    animation-delay: 0.8s;
+    animation-fill-mode: both;
+}
+
+.btn-login {
+    animation: fadeInUp 0.8s ease-out;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+
+.signup-link {
+    animation: fadeInUp 0.8s ease-out;
+    animation-delay: 1.2s;
+    animation-fill-mode: both;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 30px 20px;
+        max-width: 90%;
+    }
+
+    .login-header h1 {
+        font-size: 24px;
+    }
+
+    .input-wrapper input {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    .btn-login {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .checkbox-group {
+        font-size: 12px;
+    }
+
+    .signup-link {
+        font-size: 14px;
+    }
+}
+
+/* REQUIRED LABEL */
+.required-label {
+    font-weight: 700;
+    color: rgba(255,255,255,0.8);
+    font-size: 13px;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.required-label .asterisk {
+    color: #ff6b6b;
+}
+</style>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo" style="text-decoration: none;">
+            <img src="./assets/tmp_f83c2b80-b5e7-4372-945a-dd0c3b0d0067.webp" alt="Stackly Logo" width="120">
+        </a>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="nav-list">
+            <div class="dropdown">
+                <a href="javascript:void(0)">Home</a>
+                <div class="dropdown-content">
+                    <a href="index.html">Home 1</a>
+                    <a href="home2.html">Home 2</a>
+                </div>
+            </div>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="login.html" class="login-btn">Login</a>
+        </nav>
+    </header>
+
+<div class="login-container">
+    <div class="login-card">
+
+        <div class="login-header">
+            <h1>Create Account</h1>
+            <p>Join STACKLY and shape the future</p>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label class="required-label">Full Name <span class="asterisk">*</span></label>
+                <div class="input-wrapper">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="required-label">Email Address <span class="asterisk">*</span></label>
+                <div class="input-wrapper">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="required-label">Password <span class="asterisk">*</span></label>
+                <div class="input-wrapper">
+                    <input type="password" placeholder="Password" required>
+                </div>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" required>
+                <span><strong>I agree to Terms & Privacy</strong> <span class="asterisk">*</span></span>
+            </div>
+
+            <button class="btn-login">Create Account</button>
+        </form>
+
+        <div class="signup-link">
+            Already have an account? <a href="login.html">Login</a>
+        </div>
+
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('form');
+    const fullName = document.querySelector('input[type="text"]');
+    const email = document.querySelector('input[type="email"]');
+    const password = document.querySelector('input[type="password"]');
+    const checkbox = document.querySelector('input[type="checkbox"]');
+    const submitBtn = document.querySelector('.btn-login');
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault(); // Prevent default submission
+
+        // Validation
+        let isValid = true;
+        let errors = [];
+
+        if (!fullName.value.trim()) {
+            errors.push('Full Name is required');
+            isValid = false;
+        }
+
+        if (!email.value.trim()) {
+            errors.push('Email is required');
+            isValid = false;
+        } else if (!/\S+@\S+\.\S+/.test(email.value)) {
+            errors.push('Email is invalid');
+            isValid = false;
+        }
+
+        if (!password.value.trim()) {
+            errors.push('Password is required');
+            isValid = false;
+        } else if (password.value.length < 6) {
+            errors.push('Password must be at least 6 characters');
+            isValid = false;
+        }
+
+        if (!checkbox.checked) {
+            errors.push('You must agree to Terms & Privacy');
+            isValid = false;
+        }
+
+        if (!isValid) {
+            alert('Please fix the following errors:\n' + errors.join('\n'));
+            return;
+        }
+
+        // If valid, redirect to dashboard
+        window.location.href = '404.html'; // Replace with actual dashboard URL
+    });
+});
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>

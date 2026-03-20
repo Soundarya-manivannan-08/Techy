@@ -1,0 +1,238 @@
+/* ===============================
+   GLOBAL STYLES
+=================================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+}
+/* ===== Header Styles ===== */
+header {
+    background-color: #0f172a; /* Dark Navy */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    color: #38bdf8; /* Sky Blue */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+#nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+#nav-list a:hover {
+    color: #38bdf8;
+}
+
+/* --- Hamburger Menu Icon --- */
+.menu-toggle {
+    display: none; /* Hidden on Desktop */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* --- Responsive Mobile View --- */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Show on Mobile */
+    }
+
+    #nav-list {
+        position: absolute;
+        top: 100%; /* Sits right below header */
+        left: 0;
+        width: 100%;
+        background-color: #1e293b;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        gap: 1.5rem;
+        clip-path: circle(0% at 100% 0%); /* Starts hidden */
+        transition: clip-path 0.5s ease-in-out;
+    }
+
+    /* When JavaScript adds the 'active' class */
+    #nav-list.active {
+        clip-path: circle(150% at 100% 0%); /* Reveals menu */
+    }
+
+    /* Hamburger to X Animation */
+    .menu-toggle.open span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -7px);
+    }
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===============================
+   ABOUT SECTION
+=================================*/
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+.about-text ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.about-text li {
+    margin-bottom: 8px;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* ===============================
+   GRID SYSTEM
+=================================*/
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* ===============================
+   CARD DESIGN
+=================================*/
+.card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.center {
+    text-align: center;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+/* ===============================
+   WHY CHOOSE US ICON STYLE
+=================================*/
+.card h3 {
+    font-size: 1.2rem;
+}
+
+/* ===============================
+   FOOTER
+=================================*/
+footer {
+    background: #111827;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+=================================*/
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+}

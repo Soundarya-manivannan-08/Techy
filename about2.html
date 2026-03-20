@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>About 2 - Stackly News</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+body{
+background:#0b0c10;
+color:#eee;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+/* HERO */
+
+.hero2{
+height:80vh;
+background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
+url("./assets/img_1504711434969-e33886168f5c.webp") center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.hero2 h1{
+font-size:4rem;
+margin-bottom:20px;
+}
+
+.hero2 p{
+color:#aaa;
+font-size:1.2rem;
+max-width:700px;
+margin:auto;
+}
+
+/* CONTAINER */
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+padding:80px 0;
+}
+
+/* STATS */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+text-align:center;
+}
+
+.stat-box{
+background:#111;
+padding:40px;
+border-radius:15px;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.stat-box h2{
+color:#ff4c4c;
+font-size:2.5rem;
+margin-bottom:10px;
+}
+
+/* STORY */
+
+.story-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.story-grid img{
+width:100%;
+border-radius:20px;
+}
+
+.story-grid h2{
+font-size:2.5rem;
+margin-bottom:20px;
+}
+
+.story-grid p{
+color:#aaa;
+line-height:1.7;
+}
+
+/* TIMELINE */
+
+.timeline{
+margin-top:50px;
+border-left:2px solid #ff4c4c;
+padding-left:30px;
+}
+
+.timeline-item{
+margin-bottom:30px;
+}
+
+.timeline-item h3{
+color:#ff4c4c;
+}
+
+/* TEAM */
+
+.team{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+text-align:center;
+}
+
+.team-card{
+background:#111;
+padding:30px;
+border-radius:20px;
+transition:.3s;
+}
+
+.team-card:hover{
+transform:translateY(-10px);
+}
+
+.team-card img{
+width:120px;
+height:120px;
+border-radius:50%;
+margin-bottom:15px;
+border:3px solid #ff4c4c;
+}
+
+/* CTA */
+
+.cta2{
+background:#111;
+text-align:center;
+padding:80px 20px;
+}
+
+.cta2 h2{
+font-size:2.5rem;
+margin-bottom:20px;
+}
+
+.cta2 button{
+padding:14px 30px;
+border:none;
+background:#ff4c4c;
+color:white;
+font-size:1rem;
+border-radius:30px;
+cursor:pointer;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.story-grid{
+grid-template-columns:1fr;
+}
+
+.hero2 h1{
+font-size:2.5rem;
+}
+
+}
+
+</style>
+    <style>
+    /* --- LIGHT MODE FOR ABOUT 2 --- */
+    body.light-mode {
+        background: #f0f2f5;
+        color: #111;
+    }
+
+    body.light-mode .stat-box,
+    body.light-mode .team-card,
+    body.light-mode .cta2 {
+        background: #fff;
+        border: 1px solid rgba(0,0,0,0.1);
+        color: #111;
+    }
+
+    body.light-mode .stat-box h2,
+    body.light-mode .timeline-item h3,
+    body.light-mode .team-card h3,
+    body.light-mode .story-grid h2,
+    body.light-mode .cta2 h2 {
+        color: #111;
+    }
+
+    body.light-mode .stat-box p,
+    body.light-mode .timeline-item p,
+    body.light-mode .team-card p,
+    body.light-mode .story-grid p,
+    body.light-mode .cta2 p {
+        color: #444;
+    }
+    </style>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero2">
+<div>
+<h1>About Stackly News</h1>
+<p>Delivering unbiased journalism and real-time global news to millions of readers worldwide.</p>
+</div>
+</section>
+
+<!-- STATS -->
+
+<section class="container">
+
+<div class="stats">
+
+<div class="stat-box">
+<h2>1M+</h2>
+<p>Monthly Readers</p>
+</div>
+
+<div class="stat-box">
+<h2>40+</h2>
+<p>Countries Covered</p>
+</div>
+
+<div class="stat-box">
+<h2>500+</h2>
+<p>Published Articles</p>
+</div>
+
+<div class="stat-box">
+<h2>25</h2>
+<p>Expert Journalists</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- STORY -->
+
+<section class="container">
+
+<div class="story-grid">
+
+<div>
+<h2>Our Mission</h2>
+
+<p>
+Stackly News was built to deliver reliable, unbiased, and
+high-quality journalism. Our goal is to help readers
+understand the world through deep analysis and
+fact-checked reporting.
+</p>
+
+<p>
+From politics and technology to business and global
+events, we bring you real stories that matter.
+</p>
+
+</div>
+
+<div>
+<img src="./assets/img_1495020689067-958852a7765e.webp">
+</div>
+
+</div>
+
+</section>
+
+<!-- TIMELINE -->
+
+<section class="container">
+
+<h2 style="margin-bottom:30px;">Our Journey</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h3>2024</h3>
+<p>Idea of Stackly News was created to fight misinformation.</p>
+</div>
+
+<div class="timeline-item">
+<h3>2025</h3>
+<p>First newsroom launched with 10 journalists.</p>
+</div>
+
+<div class="timeline-item">
+<h3>2026</h3>
+<p>Global expansion with correspondents across 40+ countries.</p>
+</div>
+
+<div class="timeline-item">
+<h3>Future</h3>
+<p>Building AI-powered journalism and deeper investigative reporting.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- TEAM -->
+
+<section class="container">
+
+<h2 style="text-align:center;margin-bottom:40px;">Our Leadership</h2>
+
+<div class="team">
+
+<div class="team-card">
+<img src="./assets/img_1560250097-0b93528c311a.webp">
+<h3>Michael Chen</h3>
+<p>Editor in Chief</p>
+</div>
+
+<div class="team-card">
+<img src="./assets/img_1573496359142-b8d87734a5a2.webp">
+<h3>Sarah Jenkins</h3>
+<p>Tech Editor</p>
+</div>
+
+<div class="team-card">
+<img src="./assets/img_1519085360753-af0119f7cbe7.webp">
+<h3>David Harrison</h3>
+<p>Politics Editor</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta2">
+
+<h2>Join Our Global Newsroom</h2>
+
+<p style="color:#aaa;margin-bottom:20px;">
+We're always looking for passionate journalists.
+</p>
+
+<button>Apply Now</button>
+
+</section>
+
+</body>
+</html>

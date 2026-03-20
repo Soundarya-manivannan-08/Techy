@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNews Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- ADMIN LAYOUT -->
+    <div class="admin-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo" style="text-decoration: none;">
+                    <img src="./assets/tmp_f83c2b80-b5e7-4372-945a-dd0c3b0d0067.webp" alt="Stackly Logo" width="120">
+                </a>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="index.html"><i class="fas fa-globe"></i> View Site</a></li>
+                <li><a href="404.html" class="active"><i class="fas fa-chart-pie"></i> Analytics</a></li>
+                <li><a href="404.html"><i class="fas fa-file-alt"></i> Articles</a></li>
+                <li><a href="404.html"><i class="fas fa-users"></i> Users</a></li>
+
+                <li><a href="404.html"><i class="fas fa-envelope"></i> Messages</a></li>
+                <li><a href="404.html"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            </ul>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOP NAVIGATION -->
+            <header class="admin-header">
+                <div class="menu-toggle-dash" id="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+
+                <a href="login.html" class="exit-btn" style="margin-right: auto; margin-left: 20px; color: #ff3366; text-decoration: none; font-weight: 600; background: rgba(255, 51, 102, 0.1); padding: 8px 15px; border-radius: 8px; border: 1px solid rgba(255, 51, 102, 0.2); transition: 0.3s;">
+                    <i class="fas fa-sign-out-alt"></i> Exit
+                </a>
+
+                <div class="admin-profile">
+                    <div class="notification">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <img src="./assets/foumder.webp"
+                        alt="Admin" class="avatar">
+                    <span>Admin User</span>
+                </div>
+            </header>
+
+            <section class="dashboard-container" style="padding: 30px;">
+
+                <h2 class="dash-title">📊 TechNews Analytics Dashboard</h2>
+
+                <!-- TOP STATS -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>120K+</h3>
+                        <p>Monthly Visitors</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>850+</h3>
+                        <p>Published Articles</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>45K+</h3>
+                        <p>Subscribers</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>25+</h3>
+                        <p>Categories</p>
+                    </div>
+                </div>
+
+                <!-- ================= EXPORT SECTION ================= -->
+
+                <div class="export-section">
+
+                    <div class="export-title">
+                        <h3>📤 Export Reports</h3>
+                        <p>Download dashboard analytics in different formats</p>
+                    </div>
+
+                    <div class="export-buttons">
+                        <button class="export-btn pdf" onclick="window.location.href='404.html'">Export PDF</button>
+                        <button class="export-btn excel" onclick="window.location.href='404.html'">Export Excel</button>
+                        <button class="export-btn csv" onclick="window.location.href='404.html'">Export CSV</button>
+                        <button class="export-btn print" onclick="window.location.href='404.html'">Print Report</button>
+                    </div>
+
+                </div>
+
+                <!-- GRAPH SECTION -->
+                <div class="graph-grid">
+
+                    <!-- BAR GRAPH -->
+                    <div class="graph-card">
+                        <h3>📊 Monthly Visitors</h3>
+
+                        <div class="bar-chart">
+                            <div class="bar" style="height:70%"><span>Jan</span></div>
+                            <div class="bar" style="height:85%"><span>Feb</span></div>
+                            <div class="bar" style="height:60%"><span>Mar</span></div>
+                            <div class="bar" style="height:95%"><span>Apr</span></div>
+                            <div class="bar" style="height:80%"><span>May</span></div>
+                        </div>
+                    </div>
+
+                    <!-- LINE GRAPH -->
+                    <div class="graph-card">
+                        <h3>📈 Growth Trend</h3>
+
+                        <div class="line-chart">
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                    <!-- ================= USER ANALYTICS ================= -->
+                    <div class="analytics-grid">
+
+                        <div class="graph-card">
+                            <h3>🌍 Traffic Sources</h3>
+                            <div class="progress-box">
+                                <div class="progress-item">
+                                    <span>Direct</span>
+                                    <div class="progress-bar">
+                                        <div style="width:70%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="progress-item">
+                                    <span>Social Media</span>
+                                    <div class="progress-bar">
+                                        <div style="width:55%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="progress-item">
+                                    <span>Search Engine</span>
+                                    <div class="progress-bar">
+                                        <div style="width:85%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="progress-item">
+                                    <span>Referral</span>
+                                    <div class="progress-bar">
+                                        <div style="width:40%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="graph-card">
+                            <h3>📱 Device Usage</h3>
+                            <div class="device-grid">
+                                <div class="device-card">💻 Desktop - 52%</div>
+                                <div class="device-card">📱 Mobile - 38%</div>
+                                <div class="device-card">📟 Tablet - 10%</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- ================= RECENT ARTICLES ================= -->
+
+                    <div class="graph-card">
+                        <h3>📰 Recent Articles Performance</h3>
+
+                        <table>
+                            <tr>
+                                <th>Article</th>
+                                <th>Category</th>
+                                <th>Views</th>
+                                <th>Status</th>
+                            </tr>
+                            <tr>
+                                <td>AI in Healthcare</td>
+                                <td>AI</td>
+                                <td>12K</td>
+                                <td>Published</td>
+                            </tr>
+                            <tr>
+                                <td>Future of Cybersecurity</td>
+                                <td>Security</td>
+                                <td>18K</td>
+                                <td>Trending</td>
+                            </tr>
+                            <tr>
+                                <td>Next Gen Smartphones</td>
+                                <td>Gadgets</td>
+                                <td>9K</td>
+                                <td>Published</td>
+                            </tr>
+                            <tr>
+                                <td>Web 4.0 Explained</td>
+                                <td>Software</td>
+                                <td>6K</td>
+                                <td>Draft</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- ================= TEAM PERFORMANCE ================= -->
+
+                    <div class="graph-card">
+                        <h3>👨‍💻 Editorial Team Performance</h3>
+
+                        <div class="team-grid">
+                            <div class="team-card">
+                                <h4>Arun</h4>
+                                <p>Articles: 120</p>
+                                <p>Views: 80K</p>
+                            </div>
+
+                            <div class="team-card">
+                                <h4>Priya</h4>
+                                <p>Articles: 95</p>
+                                <p>Views: 65K</p>
+                            </div>
+
+                            <div class="team-card">
+                                <h4>Rahul</h4>
+                                <p>Articles: 140</p>
+                                <p>Views: 110K</p>
+                            </div>
+
+                            <div class="team-card">
+                                <h4>Sneha</h4>
+                                <p>Articles: 75</p>
+                                <p>Views: 50K</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ================= ACTIVITY LOG ================= -->
+
+                    <div class="graph-card">
+                        <h3>⚡ Activity Log</h3>
+                        <ul class="activity-log">
+                            <li>✔ 500 new users registered</li>
+                            <li>✔ AI article updated</li>
+                            <li>✔ Security patch blog published</li>
+                            <li>✔ Newsletter campaign sent</li>
+                            <li>✔ 1,200 comments approved</li>
+                            <li>✔ Dashboard analytics refreshed</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+    </div>
+    </section>
+    </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

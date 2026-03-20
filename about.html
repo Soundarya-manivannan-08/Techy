@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About Us - Stackly News</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        .about-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(207, 199, 199, 0.6), rgb(108, 109, 109)), url('./assets/about\ \(1\).webp') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .about-hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: white;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .about-hero p {
+            color: var(--primary);
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .about-content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            color: white;
+            letter-spacing: -1px;
+        }
+
+        .about-text p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.15rem;
+            color: #b0b0b0;
+            line-height: 1.9;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.5s ease;
+        }
+
+        .about-image img:hover {
+            transform: scale(1.02);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .team-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.4s;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .team-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid var(--primary);
+        }
+
+        .team-card h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .team-card p {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .team-socials a {
+            color: #aaa;
+            margin: 0 10px;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+
+        .team-socials a:hover {
+            color: white;
+        }
+
+        .mission-icons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .mission-icon {
+            padding: 30px;
+            border-radius: 20px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid transparent;
+        }
+
+        .mission-icon:hover {
+            transform: translateY(-15px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(0, 242, 255, 0.3);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .mission-icon i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            transition: transform 0.4s ease, filter 0.4s ease;
+        }
+
+        .mission-icon:hover i {
+            transform: scale(1.2) rotate(5deg);
+            filter: drop-shadow(0 0 10px var(--primary));
+        }
+
+        .mission-icon h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .mission-icon:hover h3 {
+            color: var(--primary);
+        }
+
+        .mission-icon p {
+            color: #aaa;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        @media(max-width: 900px) {
+            .about-content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .mission-icons {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <a href="index.html" class="logo" style="text-decoration: none;">
+            <img src="./assets/tmp_f83c2b80-b5e7-4372-945a-dd0c3b0d0067.webp" alt="Stackly Logo" width="120">
+        </a>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="nav-list">
+            <div class="dropdown">
+                <a href="javascript:void(0)">Home</a>
+                <div class="dropdown-content">
+                    <a href="index.html">Home 1</a>
+                    <a href="home2.html">Home 2</a>
+                </div>
+            </div>
+            <a href="about.html" style="color: var(--primary);">About</a>
+            <a href="services.html">Services</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="login.html" class="login-btn">Login</a>
+            <button id="theme-toggle" class="btn" style="padding: 8px 15px; border-radius: 5px; margin-left: 10px;"><i
+                    class="fas fa-sun"></i></button>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="about-hero">
+        <div>
+            <h1>About Stackly News</h1>
+            <p>Your Trusted Global News Source</p>
+        </div>
+    </section>
+
+    <!-- MAIN ABOUT SECTION -->
+    <section class="container">
+        <div class="about-content-grid">
+            <div class="about-text">
+                <h2>Our Story</h2>
+                <p>Stackly News was founded in 2026 with a singular vision: to deliver completely unbiased, high-quality
+                    journalism directly to readers worldwide. We focus deeply on the core categories of Politics,
+                    Sports, Media, Technology, and Business.</p>
+                <p>In an era of rapid information overload, we believe that understanding the context is just as
+                    important as knowing the facts. Our team of global correspondents and industry experts work
+                    tirelessly to provide deep analysis, not just headlines.</p>
+
+                <div style="margin-top: 30px; padding-left: 20px; border-left: 3px solid var(--primary);">
+                    <i style="color: #aaa; font-size: 1.2rem; font-style: italic;">"We don't just report what happened;
+                        we explain why it matters to you."</i>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="./assets/img_1504711434969-e33886168f5c.webp"
+                    alt="Newsroom Office">
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR MISSION (ICONS) -->
+    <section class="container"
+        style="background: rgba(255,255,255,0.02); padding: 50px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); margin-top: 50px;">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h2 class="section-title" style="border: none; margin-bottom: 10px;">Our Core Principles</h2>
+            <p style="color: #aaa;">The values that drive our newsroom every single day.</p>
+        </div>
+
+        <div class="mission-icons">
+            <div class="mission-icon">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Integrity & Truth</h3>
+                <p>We verify facts continuously, ensuring that everything we publish is accurate and thoroughly vetted
+                    from primary sources.</p>
+            </div>
+            <div class="mission-icon">
+                <i class="fas fa-globe-americas"></i>
+                <h3>Global Perspective</h3>
+                <p>Our correspondents are stationed in over 40 countries to provide you highly localized contexts to
+                    massive international events.</p>
+            </div>
+            <div class="mission-icon">
+                <i class="fas fa-bolt"></i>
+                <h3>Speed & Precision</h3>
+                <p>We deliver breaking news the instant it happens, without ever sacrificing the nuance and detail
+                    required to understand it.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section class="container" style="margin-top: 80px;">
+        <h2 class="section-title">Meet The Editors</h2>
+
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="./assets/foumder.webp"
+                    alt="CEO">
+                <h3>Michael Chen</h3>
+                <p>Editor in Chief</p>
+                <div class="team-socials">
+                    <a href="404.html"><i class="fab fa-twitter"></i></a>
+                    <a href="404.html"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <img src="./assets/img_1573496359142-b8d87734a5a2.webp"
+                    alt="Tech Editor">
+                <h3>Sarah Jenkins</h3>
+                <p>Head of Technology</p>
+                <div class="team-socials">
+                    <a href="404.html"><i class="fab fa-twitter"></i></a>
+                    <a href="404.html"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <img src="./assets/img_1519085360753-af0119f7cbe7.webp"
+                    alt="Politics Editor">
+                <h3>David Harrison</h3>
+                <p>Head of Politics</p>
+                <div class="team-socials">
+                    <a href="404.html"><i class="fab fa-twitter"></i></a>
+                    <a href="404.html"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <img src="./assets/img_1580489944761-15a19d654956.webp"
+                    alt="Business Editor">
+                <h3>Elena Rostova</h3>
+                <p>Head of Business</p>
+                <div class="team-socials">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <img src="./assets/img_1507003211169-0a1dd7228f2d.webp"
+                    alt="Media Editor">
+                <h3>James Wilson</h3>
+                <p>Head of Media</p>
+                <div class="team-socials">
+                    <a href="404.html"><i class="fab fa-twitter"></i></a>
+                    <a href="404.html"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <img src="./assets/img_1494790108377-be9c29b29330.webp"
+                    alt="Sport Editor">
+                <h3>Sophia Miller</h3>
+                <p>Head of Sports</p>
+                <div class="team-socials">
+                    <a href="404.html"><i class="fab fa-twitter"></i></a>
+                    <a href="404.html"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" style="margin-top: 30px;">
+        <h2>Want to Join Our Team?</h2>
+        <p style="margin-bottom: 20px; color: #ccc;">We are always looking for passionate journalists and tech experts.
+        </p>
+        <button onclick="window.location.href='404.html'">View Open Positions</button>
+    </section>
+
+    <!-- FOOTER -->
+   <footer>
+        <div class="footer-content">
+            <div>
+                <a href="index.html" class="logo" style="text-decoration: none;">
+                    <img src="./assets/tmp_f83c2b80-b5e7-4372-945a-dd0c3b0d0067.webp" alt="Logo" width="120">
+                </a>
+                <p style="margin-top: 15px;">Your premium source for Politics, Sports, Media, Technology, and Business
+                    news from around the globe.</p>
+            </div>
+
+            <div>
+                <h4 style="color: #fff; margin-bottom: 15px;">Categories</h4>
+                <a href="#politics"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Politics</a>
+                <a href="#business"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Business</a>
+                <a href="#technology"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Technology</a>
+                <a href="#sports"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Sports</a>
+                <a href="#media"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Media</a>
+            </div>
+
+            <div>
+                <h4 style="color: #fff; margin-bottom: 15px;">Quick Links</h4>
+                <a href="index.html"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Home</a>
+                <a href="contact.html"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Contact Us</a>
+                <a href="services.html" style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Service</a>
+                <a href="blog.html" style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Blog</a>
+                <a href="dashboard.html" style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Dashboard</a>
+            </div>
+
+            <div>
+                <h4 style="color: #fff; margin-bottom: 15px;">Contact</h4>
+                <p style="color: #aaa;"><i class="fas fa-map-marker-alt"
+                        style="color: var(--primary); margin-right: 10px;"></i> 123 News Avenue, NY 10001
+                </p>
+                <p style="margin-top: 5px; color: #aaa;"><i class="fas fa-phone"
+                        style="color: var(--primary); margin-right: 10px;"></i> +1 (555) 123-4567</p>
+                <p style="margin-top: 5px; color: #aaa;"><i class="fas fa-envelope"
+                        style="color: var(--primary); margin-right: 5px;"></i>contact@stacklynews.com</p>
+                <div class="social-icons" style="margin-top: 20px; font-size: 1.2rem; display: flex; gap: 15px;">
+                    <a href="404.html"><i class="fab fa-twitter" style="color: #1da1f2; cursor: pointer;"></i></a>
+                    <a href="404.html"><i class="fab fa-facebook" style="color: #1877f2; cursor: pointer;"></i></a>
+                    <a href="404.html"><i class="fab fa-instagram" style="color: #e1306c; cursor: pointer;"></i></a>
+                    <a href="404.html"> <i class="fab fa-linkedin" style="color: #0077b5; cursor: pointer;"></i></a>
+
+
+                </div>
+            </div>
+        </div>
+
+        <p class="copyright">© 2026 Stackly Multipurpose Template. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+/* ===============================
+   GLOBAL
+=================================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+/* ===============================
+   CONTAINER
+=================================*/
+.container {
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.container h1 {
+    color: #fff;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+/* ===============================
+   CARD DESIGN
+=================================*/
+.card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    max-width: 400px;
+    margin: auto;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #0f172a;
+}
+
+.card p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+/* ===============================
+   BUTTON STYLE
+=================================*/
+.card button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: #fff;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card button:hover {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    transform: scale(1.05);
+}
+
+/* ===============================
+   RESPONSIVE
+=================================*/
+@media (max-width: 600px) {
+    .container h1 {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        padding: 30px 20px;
+    }
+}

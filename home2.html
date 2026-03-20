@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Stackly News - Home 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 50px 0;
+        }
+
+        /* BREAKING NEWS */
+
+        .breaking {
+            background: #ff3366;
+            color: white;
+            padding: 12px 0;
+            font-weight: 500;
+        }
+
+        .breaking span {
+            background: black;
+            padding: 5px 10px;
+            margin-right: 15px;
+        }
+
+        /* FEATURED GRID */
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .featured-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .featured-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .featured-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+        }
+
+        .featured-overlay h3 {
+            color: white;
+        }
+
+        /* NEWS LAYOUT */
+
+        .news-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        /* ARTICLE LIST */
+
+        .article {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .article img {
+            width: 180px;
+            border-radius: 10px;
+        }
+
+        .article h3 {
+            margin-bottom: 10px;
+        }
+
+        /* SIDEBAR */
+
+        .sidebar-card {
+            background: #111;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        .sidebar-card h3 {
+            margin-bottom: 15px;
+        }
+
+        .trending li {
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 8px;
+        }
+
+        /* VIDEO SECTION */
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .video-card iframe {
+            width: 100%;
+            height: 180px;
+            border-radius: 10px;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:900px) {
+
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .news-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .article {
+                flex-direction: column;
+            }
+
+            .article img {
+                width: 100%;
+            }
+
+        }
+    </style>
+    <style>
+    /* --- LIGHT MODE FOR HOME 2 --- */
+    body.light-mode .sidebar-card,
+    body.light-mode .article,
+    body.light-mode .video-card {
+        background: #fff;
+        border: 1px solid rgba(0,0,0,0.1);
+        color: #111;
+    }
+
+    body.light-mode .sidebar-card h3,
+    body.light-mode .article h3 {
+        color: #111;
+    }
+
+    body.light-mode .article p,
+    body.light-mode .sidebar-card p {
+        color: #444;
+    }
+    </style>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <a href="index.html" class="logo" style="text-decoration: none;">
+            <img src="./assets/tmp_f83c2b80-b5e7-4372-945a-dd0c3b0d0067.webp" alt="Stackly Logo" width="120">
+        </a>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="nav-list">
+            <div class="dropdown">
+                <a href="javascript:void(0)">Home</a>
+                <div class="dropdown-content">
+                    <a href="index.html">Home 1</a>
+                    <a href="home2.html">Home 2</a>
+                </div>
+            </div>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="login.html" class="login-btn">Login</a>
+            <button id="theme-toggle" class="btn" style="padding: 8px 15px; border-radius: 5px; margin-left: 10px;"><i
+                    class="fas fa-sun"></i></button>
+        </nav>
+    </header>
+
+
+
+    <!-- HERO SECTION -->
+    <section class="video-cover" style="height: 60vh;">
+        <video autoplay loop muted playsinline class="bg-video">
+            <source src="./assets/hero2.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay">
+            <div class="video-content">
+                <h1>The Future of News</h1>
+                <p>Digital • Innovation • Global Perspectives</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED NEWS -->
+
+    <section class="container">
+
+        <div class="featured-grid">
+
+            <div class="featured-card">
+                <img src="./assets/img_1451187580459-43490279c0fa.webp">
+                <div class="featured-overlay">
+                    <h3>AI Revolution Accelerates Across Global Industries</h3>
+                </div>
+            </div>
+
+            <div class="featured-card">
+                <img src="/assets/img_1555848962-6e79363ec58f.webp">
+                <div class="featured-overlay">
+                    <h3>Historic Climate Policy Agreement Signed</h3>
+                </div>
+            </div>
+
+            <div class="featured-card">
+                <img src="/assets/sports.webp">
+                <div class="featured-overlay">
+                    <h3>Championship Final Breaks Global Viewership Records</h3>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- NEWS + SIDEBAR -->
+
+    <section class="container">
+
+        <div class="news-layout">
+
+            <!-- MAIN NEWS -->
+
+            <div>
+
+                <h2 class="section-title">Latest News</h2>
+
+                <div class="article">
+                    <img src="./assets/global.webp">
+                    <div>
+                        <h3>Global Stock Markets Surge</h3>
+                        <p>Technology companies continue driving strong gains across international markets.</p>
+                    </div>
+                </div>
+
+                <div class="article">
+                    <img src="./assets/politics.webp">
+                    <div>
+                        <h3>Startup Funding Reaches New High</h3>
+                        <p>Venture capital firms double down on AI and climate technology startups.</p>
+                    </div>
+                </div>
+
+                <div class="article">
+                    <img src="./assets/films.webp">
+                    <div>
+                        <h3>Film Industry Embraces Streaming Era</h3>
+                        <p>Major studios shift focus toward digital-first releases and global audiences.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+
+            <div>
+
+                <div class="sidebar-card">
+
+                    <h3>Trending</h3>
+
+                    <ul class="trending">
+                        <li>AI Breakthrough Stuns Researchers</li>
+                        <li>Tech Companies Announce Mega Merger</li>
+                        <li>Global Sports Event Sets Record</li>
+                        <li>Electric Vehicles Sales Skyrocket</li>
+                        <li>Streaming Platforms Dominate Media</li>
+                    </ul>
+
+                </div>
+
+                <div class="sidebar-card">
+
+                    <h3>Newsletter</h3>
+
+                    <p style="color:#aaa;margin-bottom:10px;">
+                        Get daily news updates.
+                    </p>
+
+                    <form onsubmit="window.location.href='404.html'; return false;">
+                        <input type="email" placeholder="Email address"
+                            style="width:100%;padding:10px;margin-bottom:10px;border-radius:6px;border:none" required>
+                        <button type="submit" class="subscribe-btn">Subscribe Now</button>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- VIDEO NEWS -->
+
+    <section class="container">
+
+        <h2 class="section-title">Video News</h2>
+
+        <div class="video-grid">
+
+            <div class="video-card">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Tm6V1PUx1Z4?si=l0xTNcfopbZu9BRP"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/Ke90Tje7VS0"></iframe>
+            </div>
+
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <a href="index.html" class="logo" style="text-decoration: none;">
+                    <img src="./assets/tmp_f83c2b80-b5e7-4372-945a-dd0c3b0d0067.webp" alt="Logo" width="120">
+                </a>
+                <p style="margin-top: 15px;">Your premium source for Politics, Sports, Media, Technology, and Business
+                    news from around the globe.</p>
+            </div>
+
+            <div>
+                <h4 style="color: #fff; margin-bottom: 15px;">Categories</h4>
+                <a href="index.html#politics"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Politics</a>
+                <a href="index.html#business"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Business</a>
+                <a href="index.html#technology"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Technology</a>
+                <a href="index.html#sports"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Sports</a>
+                <a href="index.html#media"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Media</a>
+            </div>
+
+            <div>
+                <h4 style="color: #fff; margin-bottom: 15px;">Company</h4>
+                <a href="about.html"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">About Us</a>
+                <a href="contact.html"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Contact Us</a>
+                <a href="#" style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Privacy
+                    Policy</a>
+                <a href="#" style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Terms of
+                    Service</a>
+            </div>
+
+            <div>
+                <h4 style="color: #fff; margin-bottom: 15px;">Contact</h4>
+                <p style="color: #aaa;"><i class="fas fa-map-marker-alt"
+                        style="color: var(--primary); margin-right: 10px;"></i> 123 News Avenue, NY 10001
+                </p>
+                <p style="margin-top: 5px; color: #aaa;"><i class="fas fa-phone"
+                        style="color: var(--primary); margin-right: 10px;"></i> +1 (555) 123-4567</p>
+                <p style="margin-top: 5px; color: #aaa;"><i class="fas fa-envelope"
+                        style="color: var(--primary); margin-right: 5px;"></i>contact@stacklynews.com</p>
+                <div class="social-icons" style="margin-top: 20px; font-size: 1.2rem; display: flex; gap: 15px;">
+                    <a href="404.html"><i class="fab fa-twitter" style="color: #1da1f2; cursor: pointer;"></i></a>
+                    <a href="404.html"><i class="fab fa-facebook" style="color: #1877f2; cursor: pointer;"></i></a>
+                    <a href="404.html"><i class="fab fa-instagram" style="color: #e1306c; cursor: pointer;"></i></a>
+                    <a href="404.html"> <i class="fab fa-linkedin" style="color: #0077b5; cursor: pointer;"></i></a>
+
+                </div>
+            </div>
+        </div>
+
+        <p class="copyright">© 2026 Stackly Multipurpose Template. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Details - Stackly News</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .article-hero {
+            position: relative;
+            padding: 100px 20px;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('./assets/img_1526374965328-7f61d4dc18c5.webp') center/cover;
+            text-align: center;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .article-hero .badge {
+            background: var(--primary);
+            color: #000;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .article-hero h1 {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.2;
+        }
+
+        .article-meta {
+            color: #ddd;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .article-meta img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid var(--primary);
+        }
+
+        .article-content {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #ccc;
+        }
+
+        .article-content h2,
+        .article-content h3 {
+            color: white;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .article-content h2 {
+            font-size: 2.2rem;
+            border-left: 4px solid var(--primary);
+            padding-left: 15px;
+        }
+
+        .article-content img {
+            width: 100%;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .article-content blockquote {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 5px solid var(--secondary);
+            padding: 20px 30px;
+            margin: 30px 0;
+            font-style: italic;
+            font-size: 1.3rem;
+            color: white;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .share-buttons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 1.2rem;
+        }
+
+        .share-buttons a:hover {
+            background: var(--primary);
+            color: black;
+            transform: translateY(-5px);
+        }
+
+        /* --- Custom Nav specific adjustments for inner pages like Blog Details --- */
+        #nav-list .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+    </style>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">Stackly <span style="color:white;">News</span></div>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="nav-list">
+            <div class="dropdown">
+                <a href="javascript:void(0)">Home <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="index.html">Home 1</a>
+                    <a href="home2.html">Home 2</a>
+                </div>
+            </div>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="blog.html" style="color: var(--primary);">Blog</a>
+            <a href="contact.html">Contact</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="login.html" class="login-btn">Login</a>
+        </nav>
+    </header>
+
+    <!-- ARTICLE HERO -->
+    <section class="article-hero">
+        <span class="badge">Cybersecurity</span>
+        <h1>Cybersecurity Trends 2026: Navigating the Next Era of Digital Threats</h1>
+        <div class="article-meta">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <img src="./assets/img_1472099645785-5658abf4ff4e.webp"
+                    alt="Author">
+                <div style="text-align: left;">
+                    <p style="color: white; font-weight: bold; margin: 0;">Michael Thompson</p>
+                    <p style="font-size: 0.85rem; margin: 0; color: var(--primary);">Senior Tech Analyst</p>
+                </div>
+            </div>
+            <span>•</span>
+            <span><i class="far fa-calendar-alt"></i> March 5, 2026</span>
+            <span>•</span>
+            <span><i class="far fa-clock"></i> 8 Min Read</span>
+        </div>
+    </section>
+
+    <!-- ARTICLE CONTENT -->
+    <main class="article-content">
+        <p>As we navigate deeper into 2026, the digital landscape is undergoing profound transformations. The relentless
+            advancement of technology has brought unparalleled convenience and efficiency, but it has also introduced
+            highly sophisticated digital threats. Organizations and individuals alike find themselves at the forefront
+            of a dynamic cyber battlefield.</p>
+
+        <p>This year, the convergence of Artificial Intelligence with malicious hacking techniques has created
+            autonomous attack vectors that traditional security systems struggle to identify. Understanding these trends
+            isn't just for IT professionals anymore; it's practically mandatory for digital survival.</p>
+
+        <h2>The Rise of AI-Powered Attacks</h2>
+        <p>One of the most alarming trends in 2026 is the democratization of sophisticated hacking tools through AI.
+            Adversaries are no longer relying on simple phishing emails. Instead, they deploy deepfake audio and highly
+            personalized spear-phishing campaigns driven by machine learning models that analyze a target's social media
+            presence to craft the perfect lure.</p>
+
+        <img src="./assets/img_1550751827-4bd374c3f58b.webp"
+            alt="Cyber Attack Server">
+
+        <p>Furthermore, polymorphic malware—malicious code that constantly changes its identifiable features to evade
+            detection—has become the standard. These intelligent viruses learn the behavior of the host environment,
+            lying dormant during scans and striking only when the system's guard routines are occupied.</p>
+
+        <blockquote>
+            "We are no longer fighting human hackers; we are fighting algorithms that operate at lightspeed. Our
+            defenses must transition from static walls to dynamic, predictive immune systems." <br>
+            <span style="font-size: 1rem; color: #888; font-style: normal; margin-top: 10px; display: block;">— Dr.
+                Elena Rostova, Global Head of Cybersecurity at TechGuard</span>
+        </blockquote>
+
+        <h2>Zero Trust Architecture Becomes the Norm</h2>
+        <p>In response to these pervasive threats, the ancient mantra of "trust, but verify" has been completely
+            discarded. In its place, the Zero Trust Architecture (ZTA) has become the gold standard across all
+            enterprise environments. ZTA operates on a simple principle: <strong>Never trust, always verify.</strong>
+        </p>
+
+        <p>This means that simply being inside the corporate network provides zero inherent privileges. Every
+            application, every device, and every user must constantly authenticate and authorize their actions,
+            step-by-step. Network segmentation has become so granular that if one node is compromised, the infection is
+            instantly isolated, preventing lateral movement across the company's infrastructure.</p>
+
+        <h3>Preparing for Quantum Threats</h3>
+        <p>While fully realized quantum computing power is still maturing, the threat it poses to traditional encryption
+            algorithms is a reality today. Savvy cybercriminals are engaging in "harvest now, decrypt later"
+            campaigns—stealing massive troves of encrypted data with the intent of cracking it open once quantum
+            computers become commercially viable.</p>
+
+        <p>To combat this, leading tech firms have started rolling out <strong>Post-Quantum Cryptography (PQC)</strong>.
+            These new mathematical algorithms are specifically designed to withstand attacks from quantum processors,
+            ensuring that data encrypted today remains secure tomorrow.</p>
+
+        <h2>Conclusion</h2>
+        <p>The cybersecurity landscape of 2026 is complex, volatile, and deeply intertwined with every aspect of our
+            lives. While the threats are more intelligent than ever, so are the defenses. By adopting zero trust
+            frameworks, investing in AI-driven threat hunting, and preparing for the quantum future, organizations can
+            navigate this new era of digital threats with confidence.</p>
+
+        <!-- SHARE BUTTONS -->
+        <div class="share-buttons">
+            <span style="margin-right: 15px; font-weight: bold; color: white; display:flex; align-items:center;">Share
+                this article:</span>
+            <a href="#" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Share via Email"><i class="fas fa-envelope"></i></a>
+        </div>
+    </main>
+
+    <!-- NEWSLETTER / CALL TO ACTION -->
+    <section class="cta"
+        style="border-radius: 20px; max-width: 1200px; margin: 80px auto; overflow: hidden; background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./assets/img_1451187580459-43490279c0fa.webp') center/cover; background-attachment: fixed;">
+        <h2>Subscribe for Daily Cybersecurity Updates</h2>
+        <p style="margin-bottom: 20px; color: #ccc;">Get the latest tech news delivered straight to your inbox.</p>
+        <div style="display: flex; justify-content: center; gap: 10px; max-width: 500px; margin: 0 auto;">
+            <input type="email" placeholder="Your Email Address"
+                style="padding: 15px; width: 100%; border-radius: 50px; border: none; outline: none; padding-left: 20px; color: #000;">
+            <button
+                style="padding: 15px 40px; background: var(--primary); border: none; border-radius: 50px; font-weight: bold; cursor: pointer; white-space: nowrap;">Subscribe</button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 15px;">Stackly<span
+                        style="color: var(--primary);">News</span></h3>
+                <p>Your premium source for Politics, Sports, Media, Technology, and Business news from around the globe.
+                </p>
+                <div style="margin-top: 20px; font-size: 1.2rem; display: flex; gap: 15px;">
+                    <i class="fab fa-twitter" style="color: #1da1f2; cursor: pointer;"></i>
+                    <i class="fab fa-facebook" style="color: #1877f2; cursor: pointer;"></i>
+                    <i class="fab fa-instagram" style="color: #e1306c; cursor: pointer;"></i>
+                    <i class="fab fa-linkedin" style="color: #0077b5; cursor: pointer;"></i>
+                </div>
+            </div>
+
+            <div>
+                <h4 style="color: #fff; margin-bottom: 15px;">Categories</h4>
+                <a href="index.html#politics"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Politics</a>
+                <a href="index.html#business"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Business</a>
+                <a href="index.html#technology"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Technology</a>
+                <a href="index.html#sports"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Sports</a>
+                <a href="index.html#media"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Media</a>
+            </div>
+
+            <div>
+                <h4 style="color: #fff; margin-bottom: 15px;">Company</h4>
+                <a href="about.html"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">About Us</a>
+                <a href="contact.html"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Contact Us</a>
+                <a href="#" style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Privacy
+                    Policy</a>
+                <a href="#" style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Terms of
+                    Service</a>
+            </div>
+        </div>
+
+        <p class="copyright" style="text-align:center; color: #555; font-size: 0.8rem; margin-top: 40px;">© 2026 Stackly
+            Multipurpose Template. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+

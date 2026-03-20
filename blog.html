@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blog - Stackly News</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .blog-hero {
+            padding: 80px 20px 40px;
+            text-align: center;
+        }
+
+        .blog-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .blog-hero p {
+            color: var(--primary);
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .card img {
+            margin-bottom: 25px;
+            display: block;
+            border-bottom: 2px solid rgba(0, 242, 255, 0.2);
+        }
+
+        .blog-btn-container {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+    </style>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <a href="index.html" class="logo" style="text-decoration: none;">
+            <img src="./assets/tmp_f83c2b80-b5e7-4372-945a-dd0c3b0d0067.webp" alt="Stackly Logo" width="120">
+        </a>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="nav-list">
+            <div class="dropdown">
+                <a href="javascript:void(0)">Home</a>
+                <div class="dropdown-content">
+                    <a href="index.html">Home 1</a>
+                    <a href="home2.html">Home 2</a>
+                </div>
+            </div>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="blog.html" style="color: var(--primary);">Blog</a>
+            <a href="contact.html">Contact</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="login.html" class="login-btn">Login</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <div class="blog-hero">
+        <h1>Stackly News Blog</h1>
+        <p>Editorials, Analysis & Tech Deep Dives</p>
+    </div>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+        <div class="blog-grid">
+
+            <!-- BLOG CARD 1 -->
+            <div class="card">
+                <img src="./assets/img_1526374965328-7f61d4dc18c5.webp"
+                    alt="Cybersecurity">
+                <h3>Cybersecurity Trends 2026</h3>
+                <p>Explore the latest cyber threats, data protection methods and AI-powered security tools.</p>
+                <div class="blog-btn-container">
+                    <a href="404.html" class="btn" style="padding: 10px 25px;">Read More</a>
+                </div>
+            </div>
+
+            <!-- BLOG CARD 2 -->
+            <div class="card">
+                <img src="./assets/img_1518770660439-4636190af475.webp"
+                    alt="AI">
+                <h3>Artificial Intelligence Revolution</h3>
+                <p>Discover how AI is transforming healthcare, education and business automation.</p>
+                <div class="blog-btn-container">
+                    <a href="404.html" class="btn" style="padding: 10px 25px;">Read More</a>
+                </div>
+            </div>
+
+            <!-- BLOG CARD 3 -->
+            <div class="card">
+                <img src="./assets/img_1498050108023-c5249f4df085.webp"
+                    alt="Web Development">
+                <h3>Modern Web Development</h3>
+                <p>Top frontend and backend technologies you should learn in 2026.</p>
+                <div class="blog-btn-container">
+                    <a href="404.html" class="btn" style="padding: 10px 25px;">Read More</a>
+                </div>
+            </div>
+
+            <!-- BLOG CARD 4 -->
+            <div class="card">
+                <img src="./assets/img_1451187580459-43490279c0fa.webp"
+                    alt="Cloud Computing">
+                <h3>Cloud Computing Growth</h3>
+                <p>Why companies are moving to AWS, Azure and Google Cloud platforms.</p>
+                <div class="blog-btn-container">
+                    <a href="404.html" class="btn" style="padding: 10px 25px;">Read More</a>
+                </div>
+            </div>
+
+            <!-- BLOG CARD 5 -->
+            <div class="card">
+                <img src="./assets/img_1621416894569-0f39ed31d247.webp"
+                    alt="Blockchain">
+                <h3>Blockchain & Cryptocurrency</h3>
+                <p>Understanding decentralized systems and the future of digital currency.</p>
+                <div class="blog-btn-container">
+                    <a href="404.html" class="btn" style="padding: 10px 25px;">Read More</a>
+                </div>
+            </div>
+
+            <!-- BLOG CARD 6 -->
+            <div class="card">
+                <img src="./assets/img_1558346490-a72e53ae2d4f.webp"
+                    alt="IoT">
+                <h3>Internet of Things (IoT)</h3>
+                <p>How smart devices are changing homes, cities and industries.</p>
+                <div class="blog-btn-container">
+                    <a href="404.html" class="btn" style="padding: 10px 25px;">Read More</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- FOOTER -->
+   <footer>
+        <div class="footer-content">
+            <div>
+                <a href="index.html" class="logo" style="text-decoration: none;">
+                    <img src="./assets/tmp_f83c2b80-b5e7-4372-945a-dd0c3b0d0067.webp" alt="Logo" width="120">
+                </a>
+                <p style="margin-top: 15px;">Your premium source for Politics, Sports, Media, Technology, and Business
+                    news from around the globe.</p>
+            </div>
+
+            <div>
+                <h4 style="color: #fff; margin-bottom: 15px;">Categories</h4>
+                <a href="#politics"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Politics</a>
+                <a href="#business"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Business</a>
+                <a href="#technology"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Technology</a>
+                <a href="#sports"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Sports</a>
+                <a href="#media"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Media</a>
+            </div>
+
+            <div>
+                <h4 style="color: #fff; margin-bottom: 15px;">Quick Links</h4>
+                <a href="index.html" style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Home</a>
+                <a href="about.html"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">About Us</a>
+                <a href="contact.html"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Contact Us</a>
+                <a href="services.html" style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Service</a>
+                <a href="dashboard.html" style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Dashboard</a>
+            </div>
+
+            <div>
+                <h4 style="color: #fff; margin-bottom: 15px;">Contact</h4>
+                <p style="color: #aaa;"><i class="fas fa-map-marker-alt"
+                        style="color: var(--primary); margin-right: 10px;"></i> 123 News Avenue, NY 10001
+                </p>
+                <p style="margin-top: 5px; color: #aaa;"><i class="fas fa-phone"
+                        style="color: var(--primary); margin-right: 10px;"></i> +1 (555) 123-4567</p>
+                <p style="margin-top: 5px; color: #aaa;"><i class="fas fa-envelope"
+                        style="color: var(--primary); margin-right: 5px;"></i>contact@stacklynews.com</p>
+                <div class="social-icons" style="margin-top: 20px; font-size: 1.2rem; display: flex; gap: 15px;">
+                    <a href="404.html"><i class="fab fa-twitter" style="color: #1da1f2; cursor: pointer;"></i></a>
+                    <a href="404.html"><i class="fab fa-facebook" style="color: #1877f2; cursor: pointer;"></i></a>
+                    <a href="404.html"><i class="fab fa-instagram" style="color: #e1306c; cursor: pointer;"></i></a>
+                    <a href="404.html"> <i class="fab fa-linkedin" style="color: #0077b5; cursor: pointer;"></i></a>
+
+
+                </div>
+            </div>
+        </div>
+
+        <p class="copyright">© 2026 Stackly Multipurpose Template. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - Stackly News</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+            align-items: start;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 450px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: 0.5s ease;
+        }
+
+        .map-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+        }
+
+        form label {
+            transition: 0.3s;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 18px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        form input:focus,
+        form textarea:focus {
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(5px);
+            box-shadow: -5px 0 0 var(--primary);
+        }
+
+        form button {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 800;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: 0.4s;
+            box-shadow: 0 10px 30px rgba(0, 242, 255, 0.3);
+        }
+
+        form button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 242, 255, 0.5);
+        }
+
+        @media (max-width: 992px) {
+            .contact-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <a href="index.html" class="logo" style="text-decoration: none;">
+            <img src="./assets/tmp_f83c2b80-b5e7-4372-945a-dd0c3b0d0067.webp" alt="Stackly Logo" width="120">
+        </a>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="nav-list">
+            <div class="dropdown">
+                <a href="javascript:void(0)">Home</a>
+                <div class="dropdown-content">
+                    <a href="index.html">Home 1</a>
+                    <a href="home2.html">Home 2</a>
+                </div>
+            </div>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html" style="color: var(--primary);">Contact</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="login.html" class="login-btn">Login</a>
+        </nav>
+    </header>
+
+    <div class="container" style="padding: 100px 0; position: relative;">
+        <!-- DECORATIVE ELEMENTS -->
+        <div style="position: absolute; top: 10%; left: -10%; width: 300px; height: 300px; background: var(--primary); filter: blur(150px); opacity: 0.1; z-index: -1;"></div>
+        <div style="position: absolute; bottom: 10%; right: -10%; width: 300px; height: 300px; background: var(--secondary); filter: blur(150px); opacity: 0.1; z-index: -1;"></div>
+
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h1 style="font-size: 4rem; margin-bottom: 20px; background: linear-gradient(to right, #fff, var(--primary)); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800;">Get In Touch</h1>
+            <p style="color: #aaa; font-size: 1.2rem; max-width: 600px; margin: 0 auto; line-height: 1.6;">Have a breaking news tip, a business inquiry, or just want to say hello? Our team is ready to connect with you 24/7.</p>
+        </div>
+
+        <div class="contact-layout">
+            <!-- CONTACT FORM (LEFT) -->
+            <div class="contact-form card" style="padding: 40px; background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1);">
+                <h2 style="color: var(--primary); margin-bottom: 30px; font-size: 1.8rem;">Send a Message</h2>
+                <form onsubmit="event.preventDefault(); window.location.href='404.html';">
+                    <div style="margin-bottom: 25px;">
+                        <label style="display: block; color: #aaa; margin-bottom: 8px; font-size: 0.9rem;">Full Name</label>
+                        <input type="text" placeholder="e.g. John Doe" required>
+                    </div>
+                    <div style="margin-bottom: 25px;">
+                        <label style="display: block; color: #aaa; margin-bottom: 8px; font-size: 0.9rem;">Email Address</label>
+                        <input type="email" placeholder="e.g. john@example.com" required>
+                    </div>
+                    <div style="margin-bottom: 35px;">
+                        <label style="display: block; color: #aaa; margin-bottom: 8px; font-size: 0.9rem;">How can we help?</label>
+                        <textarea placeholder="Type your message here..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Unlock Communication <i class="fas fa-paper-plane" style="margin-left: 10px;"></i></button>
+                </form>
+            </div>
+
+            <!-- INFO & MAP (RIGHT) -->
+            <div style="display: flex; flex-direction: column; gap: 30px;">
+                <div class="grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="card" style="padding: 25px; text-align: left; background: rgba(0, 242, 255, 0.05); border-color: rgba(0, 242, 255, 0.2);">
+                        <i class="fas fa-headset" style="font-size: 2rem; color: var(--primary); margin-bottom: 15px;"></i>
+                        <h4 style="margin-bottom: 5px;">News Desk</h4>
+                        <p style="color: #666; font-size: 0.85rem;">tips@stacklynews.com</p>
+                    </div>
+                    <div class="card" style="padding: 25px; text-align: left; background: rgba(112, 0, 255, 0.05); border-color: rgba(112, 0, 255, 0.2);">
+                        <i class="fas fa-briefcase" style="font-size: 2rem; color: var(--secondary); margin-bottom: 15px;"></i>
+                        <h4 style="margin-bottom: 5px;">Advertising</h4>
+                        <p style="color: #666; font-size: 0.85rem;">ads@stacklynews.com</p>
+                    </div>
+                </div>
+
+                <div class="map-container" style="box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.25280821873!2d-74.11976373946229!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-cross-origin"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ SECTION -->
+        <div style="margin-top: 100px;">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 50px;">Frequently Asked Questions</h2>
+            <div class="grid-3">
+                <div class="card" style="text-align: left; padding: 30px;">
+                    <h4 style="color: var(--primary); margin-bottom: 15px;">How do I submit a news tip?</h4>
+                    <p style="color: #aaa; font-size: 0.9rem; line-height: 1.6;">You can use the form above or email our dedicated tips desk at tips@stacklynews.com. All submissions are kept confidential.</p>
+                </div>
+                <div class="card" style="text-align: left; padding: 30px;">
+                    <h4 style="color: var(--primary); margin-bottom: 15px;">Are you hiring journalists?</h4>
+                    <p style="color: #aaa; font-size: 0.9rem; line-height: 1.6;">We are always looking for talented voices. Check our careers page periodically for open positions across all news categories.</p>
+                </div>
+                <div class="card" style="text-align: left; padding: 30px;">
+                    <h4 style="color: var(--primary); margin-bottom: 15px;">Can I syndicate your content?</h4>
+                    <p style="color: #aaa; font-size: 0.9rem; line-height: 1.6;">Yes, we offer flexible syndication packages for digital and print media. Contact our licensing team for more information.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+   <footer>
+        <div class="footer-content">
+            <div>
+                <a href="index.html" class="logo" style="text-decoration: none;">
+                    <img src="./assets/tmp_f83c2b80-b5e7-4372-945a-dd0c3b0d0067.webp" alt="Logo" width="120">
+                </a>
+                <p style="margin-top: 15px;">Your premium source for Politics, Sports, Media, Technology, and Business
+                    news from around the globe.</p>
+            </div>
+
+            <div>
+                <h4 style="color: #fff; margin-bottom: 15px;">Categories</h4>
+                <a href="#politics"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Politics</a>
+                <a href="#business"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Business</a>
+                <a href="#technology"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Technology</a>
+                <a href="#sports"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Sports</a>
+                <a href="#media"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Media</a>
+            </div>
+
+            <div>
+                <h4 style="color: #fff; margin-bottom: 15px;">Quick Links</h4>
+                <a href="index.html"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Home</a>
+                <a href="about.html"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">About Us</a>
+                <a href="services.html" style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Service</a>
+                <a href="blog.html" style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Blog</a>
+                <a href="dashboard.html" style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Dashboard</a>
+                
+            </div>
+
+            <div>
+                <h4 style="color: #fff; margin-bottom: 15px;">Contact</h4>
+                <p style="color: #aaa;"><i class="fas fa-map-marker-alt"
+                        style="color: var(--primary); margin-right: 10px;"></i> 123 News Avenue, NY 10001
+                </p>
+                <p style="margin-top: 5px; color: #aaa;"><i class="fas fa-phone"
+                        style="color: var(--primary); margin-right: 10px;"></i> +1 (555) 123-4567</p>
+                <p style="margin-top: 5px; color: #aaa;"><i class="fas fa-envelope"
+                        style="color: var(--primary); margin-right: 5px;"></i>contact@stacklynews.com</p>
+                <div class="social-icons" style="margin-top: 20px; font-size: 1.2rem; display: flex; gap: 15px;">
+                    <a href="404.html"><i class="fab fa-twitter" style="color: #1da1f2; cursor: pointer;"></i></a>
+                    <a href="404.html"><i class="fab fa-facebook" style="color: #1877f2; cursor: pointer;"></i></a>
+                    <a href="404.html"><i class="fab fa-instagram" style="color: #e1306c; cursor: pointer;"></i></a>
+                    <a href="404.html"> <i class="fab fa-linkedin" style="color: #0077b5; cursor: pointer;"></i></a>
+
+
+                </div>
+            </div>
+        </div>
+
+        <p class="copyright">© 2026 Stackly Multipurpose Template. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

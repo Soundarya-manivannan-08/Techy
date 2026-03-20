@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Our Services - Stackly News</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .services-hero {
+            height: 50vh;
+            background:  url('./assets/img_1552664730-d307ca884978.webp') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .services-hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: black;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .services-hero p {
+            color: black;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 242, 255, 0.1);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+
+        .service-card h3 {
+            font-size: 1.8rem;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: #aaa;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .service-card .btn-outline {
+            display: inline-block;
+            padding: 10px 25px;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 50px;
+            transition: 0.3s;
+            font-weight: 600;
+        }
+
+        .service-card .btn-outline:hover {
+            background: var(--primary);
+            color: #000;
+        }
+
+        .stats-section {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+            margin: 80px 0;
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .stat h2 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .stat h2 span {
+            color: var(--primary);
+        }
+
+        .stat p {
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        @media(max-width: 900px) {
+            .stats-section {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media(max-width: 500px) {
+            .stats-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <a href="index.html" class="logo" style="text-decoration: none;">
+            <img src="./assets/tmp_f83c2b80-b5e7-4372-945a-dd0c3b0d0067.webp" alt="Stackly Logo" width="120">
+        </a>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="nav-list">
+            <div class="dropdown">
+                <a href="javascript:void(0)">Home</a>
+                <div class="dropdown-content">
+                    <a href="index.html">Home 1</a>
+                    <a href="home2.html">Home 2</a>
+                </div>
+            </div>
+            <a href="about.html">About</a>
+            <a href="services.html" style="color: var(--primary);">Services</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="login.html" class="login-btn">Login</a>
+            <button id="theme-toggle" class="btn" style="padding: 8px 15px; border-radius: 5px; margin-left: 10px;"><i
+                    class="fas fa-sun"></i></button>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="services-hero">
+        <div>
+            <h1>Partner With Us</h1>
+            <p>Premium News Media Services</p>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="container">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto; margin-top: 40px;">
+            <h2 class="section-title" style="border: none; margin-bottom: 15px;">What We Offer</h2>
+            <p style="color: #aaa; font-size: 1.1rem; line-height: 1.6;">Maximize your brand's reach by leveraging
+                Stackly News' massive global audience. We provide bespoke media packages designed for maximum ROI.</p>
+        </div>
+
+        <div class="service-grid">
+            <div class="service-card">
+                <i class="fas fa-bullhorn"></i>
+                <h3>Digital Advertising</h3>
+                <p>Premium banner ad placements across our highest traffic sections including Technology, Business, and
+                    Homepage takeovers.</p>
+                <a href="404.html" class="btn-outline">Learn More</a>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-pen-nib"></i>
+                <h3>Sponsored Content</h3>
+                <p>Native articles written by our expert journalists to tell your brand's story authentically alongside
+                    our daily news.</p>
+                <a href="404.html" class="btn-outline">Learn More</a>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-envelope-open-text"></i>
+                <h3>Newsletter Injections</h3>
+                <p>Reach over 500,000 active subscribers through our daily and weekly targeted email blast sponsorships.
+                </p>
+                <a href="404.html" class="btn-outline">Learn More</a>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-video"></i>
+                <h3>Video Production</h3>
+                <p>High-end video journalism and documentary-style promotional content creation for your cutting edge
+                    tech brand.</p>
+                <a href="404.html" class="btn-outline">Learn More</a>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-podcast"></i>
+                <h3>Podcast Sponsorship</h3>
+                <p>Audio ad rolls and exclusive sponsor interviews on the industry-leading Stackly Daily tech and
+                    politics podcasts.</p>
+                <a href="404.html" class="btn-outline">Learn More</a>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-handshake"></i>
+                <h3>Event Partnerships</h3>
+                <p>Co-host exclusive digital webinars and summit events targeting C-level executives and global decision
+                    makers.</p>
+                <a href="404.html" class="btn-outline">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- GLOBAL STATS -->
+    <section class="container">
+        <div class="stats-section">
+            <div class="stat">
+                <h2><span class="counter-anim" data-target="12">0</span>+ <span>M</span></h2>
+                <p>Monthly Readers</p>
+            </div>
+            <div class="stat">
+                <h2><span class="counter-anim" data-target="500">0</span>+ <span>K</span></h2>
+                <p>Newsletter Subs</p>
+            </div>
+            <div class="stat">
+                <h2><span class="counter-anim" data-target="42">0</span>+ <span>%</span></h2>
+                <p>C-Level Audience</p>
+            </div>
+            <div class="stat">
+                <h2><span class="counter-anim" data-target="150">0</span>+ <span></span></h2>
+                <p>Countries Reached</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" style="margin-top: 40px;">
+        <h2>Ready to elevate your brand?</h2>
+        <p style="margin-bottom: 20px; color: #ccc;">Contact our media sales team to build a custom advertising package
+            today.</p>
+        <button onclick="window.location.href='404.html'">Request Media Kit</button>
+    </section>
+
+    <!-- FOOTER -->
+<footer>
+        <div class="footer-content">
+            <div>
+                <a href="index.html" class="logo" style="text-decoration: none;">
+                    <img src="./assets/tmp_f83c2b80-b5e7-4372-945a-dd0c3b0d0067.webp" alt="Logo" width="120">
+                </a>
+                <p style="margin-top: 15px;">Your premium source for Politics, Sports, Media, Technology, and Business
+                    news from around the globe.</p>
+            </div>
+
+            <div>
+                <h4 style="color: #fff; margin-bottom: 15px;">Categories</h4>
+                <a href="#politics"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Politics</a>
+                <a href="#business"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Business</a>
+                <a href="#technology"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Technology</a>
+                <a href="#sports"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Sports</a>
+                <a href="#media"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Media</a>
+            </div>
+
+            <div>
+                <h4 style="color: #fff; margin-bottom: 15px;">Quick Links</h4>
+                <a href="index.html" style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Home</a>   
+                <a href="about.html"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">About Us</a>
+                <a href="contact.html"
+                    style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Contact Us</a>
+                
+                <a href="blog.html" style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Blog</a>
+                <a href="dashboard.html" style="color: #aaa; text-decoration: none; display: block; margin-bottom: 8px;">Dashboard</a>
+            </div>
+
+            <div>
+                <h4 style="color: #fff; margin-bottom: 15px;">Contact</h4>
+                <p style="color: #aaa;"><i class="fas fa-map-marker-alt"
+                        style="color: var(--primary); margin-right: 10px;"></i> 123 News Avenue, NY 10001
+                </p>
+                <p style="margin-top: 5px; color: #aaa;"><i class="fas fa-phone"
+                        style="color: var(--primary); margin-right: 10px;"></i> +1 (555) 123-4567</p>
+                <p style="margin-top: 5px; color: #aaa;"><i class="fas fa-envelope"
+                        style="color: var(--primary); margin-right: 5px;"></i>contact@stacklynews.com</p>
+                <div class="social-icons" style="margin-top: 20px; font-size: 1.2rem; display: flex; gap: 15px;">
+                    <a href="404.html"><i class="fab fa-twitter" style="color: #1da1f2; cursor: pointer;"></i></a>
+                    <a href="404.html"><i class="fab fa-facebook" style="color: #1877f2; cursor: pointer;"></i></a>
+                    <a href="404.html"><i class="fab fa-instagram" style="color: #e1306c; cursor: pointer;"></i></a>
+                    <a href="404.html"> <i class="fab fa-linkedin" style="color: #0077b5; cursor: pointer;"></i></a>
+
+
+                </div>
+            </div>
+        </div>
+
+        <p class="copyright">© 2026 Stackly Multipurpose Template. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
